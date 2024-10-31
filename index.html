@@ -20,7 +20,7 @@
                     <li class="nav-list-item"><button class="nav-list-item-btn">NEW</button></li>
                     <li class="nav-list-item"><button class="nav-list-item-btn">MEN</button></li>
                     <li class="nav-list-item"><button class="nav-list-item-btn">WOMEN</button></li>
-                    <li class="nav-list-item"><button class="nav-list-item-btn">KIDS</button></li>
+                    <li class="nav-list-item"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button class="nav-list-item-btn">KIDS</button></a></li>
                 </ul>
             </nav>
             <ul class="contacts-list">
@@ -42,7 +42,7 @@
         <div class="container">
         <div class="hero-wrap">
         <h1 class="hero-title">NIKE AIR FORCE</h1>
-        <p class="hero-desc">Launched in 1982 and lives due today</p>
+        <p class="hero-desc">Launched in 1982 and lives due <br> today</p>
         <a class="hero-btn-link" href="#sneakerDisplay"><button class="hero-btn">BUY</button></a>
         </div>
         </div>
@@ -91,7 +91,7 @@
                 <ul class="section-size-list-colour">
                     <li class="section-size-list-colour-item"><button onclick="changeSneakerImage('Shoegreen.png')" class="section-size-list-colour-item-btn"><img src="./img/Green.png" alt="Something went wrong..."></button></li>
                     <li class="section-size-list-colour-item"><button onclick="changeSneakerImage('Shoewhite.png')" class="section-size-list-colour-item-btn"><img src="./img/White.png" alt="Something went wrong..."></button></li>
-                    <li class="section-size-list-colour-item"><button onclick="changeSneakerImage('Shoeblack.png')" class="section-size-list-colour-item-btn"><img src="./img/Black.png" alt="Something went wrong..."></button></li>
+                    <li class="section-size-list-colour-item"><button onclick="changeSneakerImage('Shoeblack.png')" class="section-size-list-colour-item-btn"><img src="./img/Pashalko.png" alt="Something went wrong..."></button></li>
                 </ul>
                 <button class="section-size-btn">BUY</button>
             </div>
@@ -101,7 +101,7 @@
         <div class="container">
         <div class="description-list">
             <button class="section-description-list-item-title border-line">DESCRIPTION</button>
-            <button class="section-description-list-item-title border-line2">CUSTOMER REVIEWS</button>
+            <button class="section-description-list-item-title border-line2" onclick="showAlert()">CUSTOMER REVIEWS</button>
         </div>
         <p class="section-description-desc">The Nike Air Force, launched in 1982, was designed by Bruce Kilgore as the first basketball shoe with Nike Air technology. Originally created for performance on the basketball court, the sneaker quickly became popular off the court, celebrated for its clean design and durability. Over the decades, the Air Force 1 transformed into a cultural icon, especially in hip-hop and streetwear. Today, it remains one of Nike's best-selling models, beloved worldwide for its versatility and timeless appeal.</p>
         </div>
@@ -169,6 +169,11 @@
             }
             button.classList.add('active');
             lastSelectedButton = button;
+        }
+    </script>
+    <script>
+        function showAlert() {
+            alert(`Not made yet!`);
         }
     </script>
 </body>

@@ -67,11 +67,17 @@ html{
 .hero-btn{
     border: black 3px solid;
     border-radius: 150px;
-    width: 555px;
-    height: 82px;
+    width: 325px;
+    height: 56px;
     color: #000;
-    font-size: 48px;
+    font-size: 32px;
     margin-top: 30px;
+    font-weight: 700;
+}
+.hero-btn-link{
+    width: 325px;
+    height: 56px;;
+    
 }
 .hero-btn:hover{
     background-color: rgb(71, 71, 71);
