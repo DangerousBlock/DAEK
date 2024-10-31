@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAEK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+        <div class="header-wrap">
+            <h1 class="logo">DAEK</h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-list-item"><button class="nav-list-item-btn">NEW</button></li>
+                    <li class="nav-list-item"><button class="nav-list-item-btn">MEN</button></li>
+                    <li class="nav-list-item"><button class="nav-list-item-btn">WOMEN</button></li>
+                    <li class="nav-list-item"><button class="nav-list-item-btn">KIDS</button></li>
+                </ul>
+            </nav>
+            <ul class="contacts-list">
+                <li><button class="contacts-list-btn">
+                        <svg class="contacts-list-svg" width="50" height="50">
+                            <use href="./symbol-defs.svg#icon-account_circle"></use>
+                        </svg></button>
+                </li>
+                <li><button class="contacts-list-btn">
+                    <svg class="contacts-list-svg" width="50" height="50">
+                        <use href="./symbol-defs.svg#icon-local_mall"></use>
+                    </svg></button>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+        <div class="hero-wrap">
+        <h1 class="hero-title">NIKE AIR FORCE</h1>
+        <p class="hero-desc">Launched in 1982 and lives due today</p>
+        <a class="hero-btn-link" href="#sneakerDisplay"><button class="hero-btn">BUY</button></a>
+        </div>
+        </div>
+    </section>
+    <section class="photo">
+        <div class="container">
+        <ul class="photo-list">
+            <li class="photo-list-item"><img class="photo-list-item-img" src="/img/Frame 25.png" alt="Something went wrong..."></li>
+            <li class="photo-list-item"><img class="photo-list-item-img" src="/img/Frame 26.png" alt="Something went wrong..."></li>
+            <li class="photo-list-item"><img class="photo-list-item-img" src="/img/Frame 24.png" alt="Something went wrong..."></li>
+        </ul>
+        <ul class="photo-list-2">
+            <li class="photo-list2-item">
+                <img class="photo-list2-item-img" src="/img/Frame 29.png" alt="Something went wrong...">
+                <p class="photo-list2-item-desc">GREEN AND <br> WHITE</p>
+            </li>
+            <li class="photo-list2-item">
+                <img class="photo-list2-item-img" src="/img/Frame 28.png" alt="Something went wrong...">
+                <p class="photo-list2-item-desc">WHITE</p>
+            </li>
+            <li class="photo-list2-item">
+                <img class="photo-list2-item-img" src="/img/Frame 29.png" alt="Something went wrong...">
+                <p class="photo-list2-item-desc">BLACK AND <br> WHITE</p>
+            </li>
+        </ul>
+        <div class="line"></div>
+        </div>
+    </div>
+    </section>
+    <section class="sneaker-display" id="sneakerDisplay" style="background-image: url(Shoewhite.png); background-repeat: no-repeat; background-position: bottom right 240px; transition: 0.3s ease-in-out;">
+        <div class="container">
+            <h2 class="section-size-title">SIZE</h2>
+            <div class="size-wrapper">
+                <div class="section-size-list-btn" onclick="selectSize(this)">38.5</div>
+                <div class="section-size-list-btn" onclick="selectSize(this)">39</div>
+                <div class="section-size-list-btn" onclick="selectSize(this)">39.5</div>
+                <div class="section-size-list-btn" onclick="selectSize(this)">40.5</div>
+                <div class="section-size-list-btn" onclick="selectSize(this)">41</div>
+                <div class="section-size-list-btn" onclick="selectSize(this)">41.5</div>
+                <div class="section-size-list-btn" onclick="selectSize(this)">42</div>
+                <div class="section-size-list-btn" onclick="selectSize(this)">42.5</div>
+                <div class="section-size-list-btn" onclick="selectSize(this)">43</div>
+                <div class="section-size-list-btn" onclick="selectSize(this)">43.5</div>
+            </div>     
+            <div class="button-wrapper">
+                <ul class="section-size-list-colour">
+                    <li class="section-size-list-colour-item"><button onclick="changeSneakerImage('Shoegreen.png')" class="section-size-list-colour-item-btn"><img src="/img/Green.png" alt="Something went wrong..."></button></li>
+                    <li class="section-size-list-colour-item"><button onclick="changeSneakerImage('Shoewhite.png')" class="section-size-list-colour-item-btn"><img src="/img/White.png" alt="Something went wrong..."></button></li>
+                    <li class="section-size-list-colour-item"><button onclick="changeSneakerImage('Shoeblack.png')" class="section-size-list-colour-item-btn"><img src="/img/Black.png" alt="Something went wrong..."></button></li>
+                </ul>
+                <button class="section-size-btn">BUY</button>
+            </div>
+        </div>
+    </section>    
+    <section class="section-description">
+        <div class="container">
+        <div class="description-list">
+            <button class="section-description-list-item-title border-line">DESCRIPTION</button>
+            <button class="section-description-list-item-title border-line2">CUSTOMER REVIEWS</button>
+        </div>
+        <p class="section-description-desc">The Nike Air Force, launched in 1982, was designed by Bruce Kilgore as the first basketball shoe with Nike Air technology. Originally created for performance on the basketball court, the sneaker quickly became popular off the court, celebrated for its clean design and durability. Over the decades, the Air Force 1 transformed into a cultural icon, especially in hip-hop and streetwear. Today, it remains one of Nike's best-selling models, beloved worldwide for its versatility and timeless appeal.</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="contact-container">
+                <ul class="footer-list">
+                    <h4 class="footer-list-title">Support</h4>
+                    <li class="footer-list-item">
+                        <svg class="footer-svg" width="72" height="72">
+                            <use href="./symbol-defs.svg#icon-phone"></use>
+                        </svg>
+                        <a href="tel:" class="footer-list-desc">(+380) 95 414 58 92</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <svg class="footer-svg" width="72" height="72">
+                            <use href="./symbol-defs.svg#icon-mail"></use>
+                        </svg>
+                        <a href="mailto:" class="footer-list-desc">daek45@gmail.com</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <svg class="footer-svg" width="72" height="72">
+                            <use href="./symbol-defs.svg#icon-internet"></use>
+                        </svg>
+                        <a href="daekhelp.com" class="footer-list-desc">daekhelp.com</a>
+                    </li>
+                </ul>
+    
+                <ul class="footer-list2">
+                    <h4 class="footer-list-title">Social media</h4>
+                    <li class="footer-list-item">
+                        <svg class="footer-svg" width="72" height="72">
+                            <use href="./symbol-defs.svg#icon-instagram"></use>
+                        </svg>
+                        <a href="https://www.instagram.com" class="footer-list-desc">inst._daek@sh_</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <svg class="footer-svg" width="72" height="72">
+                            <use href="./symbol-defs.svg#icon-telegram"></use>
+                        </svg>
+                        <a href="https://web.telegram.org/a/" class="footer-list-desc">t.me/daekshoes_shop</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <svg class="footer-svg" width="72" height="72">
+                            <use href="./symbol-defs.svg#icon-youtube"></use>
+                        </svg>
+                        <a href="https://www.youtube.com" class="footer-list-desc">https://yt_daek_shoes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function changeSneakerImage(image) {
+            const sneakerDisplay = document.getElementById('sneakerDisplay');
+            sneakerDisplay.style.backgroundImage = `url(${image})`;
+        }
+    </script>
+    <script>
+        let lastSelectedButton = null;
+        function selectSize(button) {
+            if (lastSelectedButton) {
+                lastSelectedButton.classList.remove('active');
+            }
+            button.classList.add('active');
+            lastSelectedButton = button;
+        }
+    </script>
+</body>
+</html>
