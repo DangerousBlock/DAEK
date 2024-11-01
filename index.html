@@ -41,7 +41,7 @@
     <section class="hero">
         <div class="container">
         <div class="hero-wrap">
-        <h1 class="hero-title">NIKE AIR FORCE</h1>
+        <h2 class="hero-title">NIKE AIR FORCE</h2>
         <p class="hero-desc">Launched in 1982 and lives due <br> today</p>
         <a class="hero-btn-link" href="#sneakerDisplay"><button class="hero-btn">BUY</button></a>
         </div>
@@ -74,7 +74,7 @@
     </section>
     <section class="sneaker-display" id="sneakerDisplay" style="background-image: url(Shoewhite.png); background-repeat: no-repeat; background-position: bottom right 240px; transition: 0.3s ease-in-out;">
         <div class="container">
-            <h2 class="section-size-title">SIZE</h2>
+            <h3 class="section-size-title">SIZE</h3>
             <div class="size-wrapper">
                 <div class="section-size-list-btn" onclick="selectSize(this)">38.5</div>
                 <div class="section-size-list-btn" onclick="selectSize(this)">39</div>
@@ -100,17 +100,42 @@
     <section class="section-description">
         <div class="container">
         <div class="description-list">
-            <button class="section-description-list-item-title border-line">DESCRIPTION</button>
-            <button class="section-description-list-item-title border-line2" onclick="showAlert()">CUSTOMER REVIEWS</button>
+            <button class="section-description-list-item-title border-line" id="description-tab">DESCRIPTION</button>
+            <button class="section-description-list-item-title " id="reviews-tab">CUSTOMER REVIEWS</button>
         </div>
-        <p class="section-description-desc">The Nike Air Force, launched in 1982, was designed by Bruce Kilgore as the first basketball shoe with Nike Air technology. Originally created for performance on the basketball court, the sneaker quickly became popular off the court, celebrated for its clean design and durability. Over the decades, the Air Force 1 transformed into a cultural icon, especially in hip-hop and streetwear. Today, it remains one of Nike's best-selling models, beloved worldwide for its versatility and timeless appeal.</p>
+        <div id="description-content" class="content activated"><p class="section-description-desc">The Nike Air Force, launched in 1982, was designed by Bruce Kilgore as the first basketball shoe with Nike Air technology. Originally created for performance on the basketball court, the sneaker quickly became popular off the court, celebrated for its clean design and durability. Over the decades, the Air Force 1 transformed into a cultural icon, especially in hip-hop and streetwear. Today, it remains one of Nike's best-selling models, beloved worldwide for its versatility and timeless appeal.</p></div>
+        <div id="reviews-content" class="content">
+        <div class="review-div">
+            <div class="review-head-wrap">
+        <div class="review-author-wrap"><img class="review-author-img" src="./img/Frame 60.png" alt="img"><h4 class="review-author-title" id="author">JakeTheSnake</h4></div>
+        <img class="review-stars" src="./img/Group 60.png" width="256" height="32" alt="img">
+            </div>
+        <p id="review-text" class="section-reviews-desc reviews">These Nike Air Force shoes are incredible! Super comfortable and stylish – they go with everything. Definitely worth the price.</p>
+        </div>
+        <div class="review-scroll-panel">
+            <div class="review-scroll-panel-wrap">
+            <div class="arrows hidden" id="arrows">
+                <img onclick="prevReview()" class="review-img" src="./img/arrow-left.png" width="7" height="12" alt="Something went wrong...">
+            </div>
+            <div class="review-scroll" onclick="changeReview(0)"></div>
+            <div class="review-scroll" onclick="changeReview(1)"></div>
+            <div class="review-scroll" onclick="changeReview(2)"></div>
+            <div class="review-scroll" onclick="changeReview(3)"></div>
+            <div class="review-scroll" onclick="changeReview(4)"></div>
+            <div>
+                <img onclick="nextReview()" class="review-img" src="./img/arrow-right.png" width="7" height="12" alt="Something went wrong...">
+            </div>
+            </div>
+        </div>
+        </div>
         </div>
     </section>
+    <section>
     <footer class="footer">
         <div class="container">
             <div class="contact-container">
                 <ul class="footer-list">
-                    <h4 class="footer-list-title">Support</h4>
+                    <h5 class="footer-list-title">Support</h5>
                     <li class="footer-list-item">
                         <svg class="footer-svg" width="72" height="72">
                             <use href="./symbol-defs.svg#icon-phone"></use>
@@ -130,9 +155,8 @@
                         <a href="daekhelp.com" class="footer-list-desc">daekhelp.com</a>
                     </li>
                 </ul>
-    
                 <ul class="footer-list2">
-                    <h4 class="footer-list-title">Social media</h4>
+                    <h5 class="footer-list-title">Social media</h5>
                     <li class="footer-list-item">
                         <svg class="footer-svg" width="72" height="72">
                             <use href="./symbol-defs.svg#icon-instagram"></use>
@@ -171,10 +195,74 @@
             lastSelectedButton = button;
         }
     </script>
-    <script>
-        function showAlert() {
-            alert(`Not made yet!`);
-        }
-    </script>
+<script>
+    const descriptionTab = document.getElementById('description-tab');
+    const reviewsTab = document.getElementById('reviews-tab');
+    const descriptionContent = document.getElementById('description-content');
+    const reviewsContent = document.getElementById('reviews-content');
+    const underline = document.getElementById('description-tab');
+    const underline2 = document.getElementById('reviews-tab');
+    const reviewText = document.getElementById('review-text');
+    const arrows = document.getElementById('arrows');
+    const dots = document.querySelectorAll('.review-scroll');
+    const authorText = document.getElementById('author');
+    
+    const authors = [
+      "JakeTheSnake",
+      "EmilyRocks",
+      "KicksKing",
+      "TheSneakerGeek",
+      "LunaMoon"
+    ]
+
+    const reviews = [
+      "These Nike Air Force shoes are incredible! Super comfortable and stylish – they go with everything. Definitely worth the price.",
+      "Love the design and quality, but they’re a bit stiff at first. Took a couple of wears to break them in, but now they’re perfect!",
+      "One of the best purchases I’ve made! Classic style and super comfortable for all-day wear. Perfect for any outfit.",
+      "Great look, but they run a little small. I’d recommend ordering a half size up. Otherwise, solid sneakers.",
+      "Really love the colors and design, but wish the sole was a bit softer. Still happy with them overall!"
+    ];
+
+    let currentReviewIndex = 0;
+
+    descriptionTab.addEventListener('click', () => {
+      descriptionContent.classList.add('activated');
+      reviewsContent.classList.remove('activated');
+      underline.classList.add('border-line');
+      underline2.classList.remove('border-line');
+      arrows.classList.add('hidden');
+      resetDots();
+    });
+  
+    reviewsTab.addEventListener('click', () => {
+      descriptionContent.classList.remove('activated');
+      reviewsContent.classList.add('activated');
+      underline2.classList.add('border-line');
+      underline.classList.remove('border-line');
+      arrows.classList.remove('hidden');
+      resetDots();
+      changeReview(0);
+    });
+  
+    function changeReview(index) {
+      currentReviewIndex = index;
+      reviewText.textContent = reviews[currentReviewIndex];
+      authorText.textContent = `${authors[currentReviewIndex]}`;
+      resetDots();
+      dots[currentReviewIndex].classList.add('activated');
+    }
+    function resetDots() {
+      dots.forEach(dot => dot.classList.remove('activated'));
+    }
+    function nextReview() {
+      currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+      changeReview(currentReviewIndex);
+    }
+
+    function prevReview() {
+      currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
+      changeReview(currentReviewIndex);
+    }
+  </script>
 </body>
 </html>

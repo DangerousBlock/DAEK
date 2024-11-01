@@ -210,21 +210,117 @@ html{
     color: black;
     font-size: 48px;
     font-weight: 700;
+    margin-bottom: 48px;
 }
 .border-line{
-    padding-bottom: 10px;
+    margin-top: 10px;
     border-bottom: 7px solid white;
     border-radius: 5px;
 }
-
+.section-reviews-desc{
+    display: flex;
+    margin-top: 20px;
+    font-size: 36px;
+    align-items: left;
+    max-width: 945px;
+    margin-bottom: 80px;
+    margin-left: 115px;
+    font-weight: 350;
+}
+.reviews-list{
+    display: flex;
+    gap: 180px;
+    font-size: 48px;
+    margin-top: 120px;
+    flex-direction: row;
+}
+.review-stars{
+    margin-top: 55px;
+}
+.section-reviews-list-item-title{
+    background-color: rgb(230, 230, 230);
+    color: black;
+    font-size: 48px;
+    font-weight: 700;
+}
+.review-div{
+    background-color: white;
+    margin: 0 auto;
+    width: 1130px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+.review-head-wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    font-size: 40px;
+}
+.review-author-wrap{
+    display: flex;
+    gap: 24px;
+    margin-left: 115px;
+    margin-top: 41px;
+}
+.review-scroll-panel{
+    background-color: white;
+    width: 1130px;
+    height: 24px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.review-scroll{
+    width: 96px;
+    height: 12px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.review-scroll-panel-wrap{
+    width: 1120px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+.review-author-img,.review-stars{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.review-img{
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.hidden{
+    display: none;
+}
+.content { 
+    display: none; 
+    margin-top: 20px; 
+}
+.activated {
+    display: block; 
+}
+.section-description{
+    height: 633px;
+}
 .section-description-desc{
-    margin-top: 36px;
     font-size: 36px;
     align-items: left;
     max-width: 945px;
     margin-bottom: 120px;
 }
 footer{
+    margin-top: 41px;
     background-color: white;
     height: 569px;
 }
